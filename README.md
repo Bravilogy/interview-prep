@@ -20,10 +20,19 @@ The question-generator part exists as dozens of free web tools. What they cannot
 
 ## Install
 
-**Claude Code**
+The quickest way, for any agent the [skills CLI](https://github.com/vercel-labs/skills) supports:
 
 ```bash
-git clone https://github.com/Bravilogy/interview-prep ~/.claude/skills/interview-prep
+npx skills add Bravilogy/interview-prep
+```
+
+Add `-g` to install it for every project rather than just the current one.
+
+**Claude Code, by hand**
+
+```bash
+git clone https://github.com/Bravilogy/interview-prep ~/.claude/skills/interview-prep-repo
+ln -s ~/.claude/skills/interview-prep-repo/interview-prep ~/.claude/skills/interview-prep
 ```
 
 Or copy the `interview-prep/` folder into `.claude/skills/` in any project.
