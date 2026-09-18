@@ -23,7 +23,7 @@ The question-generator part exists as dozens of free web tools. What they cannot
 **Claude Code**
 
 ```bash
-git clone https://github.com/<you>/interview-prep ~/.claude/skills/interview-prep
+git clone https://github.com/Bravilogy/interview-prep ~/.claude/skills/interview-prep
 ```
 
 Or copy the `interview-prep/` folder into `.claude/skills/` in any project.
