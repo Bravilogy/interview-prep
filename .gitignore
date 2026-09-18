@@ -1,0 +1,5 @@
+# generated practice material when the skill is run from inside this repo
+/interview-prep/*/
+!/interview-prep/references/
+node_modules/
+.DS_Store

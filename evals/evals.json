@@ -1,0 +1,72 @@
+{
+  "skill_name": "interview-prep",
+  "evals": [
+    {
+      "id": 0,
+      "name": "technical-questions",
+      "prompt": "Here's a JD I'm interviewing for next week. Give me the questions they'd ask in the technical round.\n\n---\nSenior Backend Engineer \u2014 Payments Platform\nLedgerly (Series B fintech, ~120 people, London/remote)\n\nWe process card and bank payments for marketplaces across the UK and EU. The Payments Platform team owns the money-movement core: authorisation, capture, refunds, payouts and reconciliation.\n\nWhat you'll do\n- Design and build Go services that move money reliably at scale (tens of millions of transactions/month)\n- Own the ledger and reconciliation pipeline end to end\n- Work with Kafka for event-driven flows between payment, risk and payout services\n- Improve observability and on-call health for the platform\n- Mentor mid-level engineers and lead technical design reviews\n\nWhat we're looking for\n- 5+ years backend experience, 2+ in Go\n- Deep experience with Postgres in high-write workloads\n- You've operated distributed systems in production and have opinions about idempotency, retries and exactly-once semantics\n- Comfortable with ambiguity; we're still building the process around the product\n- Bonus: PCI-DSS, open banking, or double-entry accounting experience\n\nOur stack: Go, Postgres, Kafka, Kubernetes on AWS, Datadog, Terraform.",
+      "expected_output": "A role profile file and a technical round file with 8-10 questions specific to Go, Postgres high-write, Kafka, payments/idempotency/reconciliation, calibrated to senior. Each question has why-they-ask, strong-answer bullets, and follow-ups.",
+      "files": [],
+      "assertions": [
+        "A role profile is written that states seniority as senior and lists Go, Postgres, Kafka and the payments domain",
+        "A technical round file exists with between 8 and 10 numbered questions",
+        "Every question has a 'why they ask it' line, strong-answer bullets, and at least one follow-up",
+        "At least 6 questions reference something specific from the JD (Go, Postgres high-write, Kafka, idempotency, reconciliation, ledger, payouts, refunds, PCI)",
+        "No question is a generic textbook or trivia question that could be asked unchanged at any company (e.g. 'explain message queues', 'what is a goroutine')",
+        "No question leaks its own answer in the wording (e.g. names the race condition it is asking the candidate to find)",
+        "Questions are calibrated to senior: at least 3 probe judgment or trade-offs rather than recall"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "take-home-scaffold",
+      "prompt": "Generate a take-home test for this role. I'll do it tonight and want you to review it after.\n\nMid-level Frontend Engineer (React / TypeScript)\nRosterly \u2014 scheduling software for hospitality teams\n\nRosterly helps restaurants and bars build staff rotas, track hours and manage shift swaps. You'll join a team of 4 frontend engineers working on the manager-facing web app.\n\nResponsibilities\n- Build and maintain features in our React + TypeScript app (Vite, React Query, Tailwind)\n- Work closely with product and design to ship weekly\n- Write tests with Vitest and React Testing Library\n- Improve performance of data-heavy views (rota grids with hundreds of shifts)\n\nRequirements\n- 2-4 years with React and TypeScript\n- Solid understanding of state management and data fetching patterns\n- Experience with forms, validation and optimistic UI\n- Care about accessibility and keyboard navigation\n- Nice to have: experience with drag-and-drop UIs, date/time handling across timezones",
+      "expected_output": "A take-home directory with BRIEF.md, README.md, a hidden .rubric/RUBRIC.md, and a minimal runnable Vite+React+TS starter with Vitest set up. The task is a scheduling/rota domain slice with one hard part (e.g. shift overlap or timezone), an intentionally ambiguous requirement, and a 3-4 hour budget.",
+      "files": [],
+      "assertions": [
+        "A take-home directory contains BRIEF.md, README.md, and a rubric in a hidden .rubric/ directory",
+        "A runnable Vite + React + TypeScript starter exists with Vitest configured and at least one test file",
+        "The scaffold's tests pass when run (npm install && npm test or equivalent)",
+        "BRIEF.md states a time budget of roughly 3 to 4 hours",
+        "The task is in the rota/scheduling/hospitality domain, not a generic todo app",
+        "BRIEF.md contains at least one intentionally underspecified requirement, and RUBRIC.md scores whether the candidate noticed and documented a decision on it",
+        "RUBRIC.md identifies one hard part and weights it more heavily than other criteria",
+        "The final message tells the user not to read the rubric until they finish and how to trigger the review"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "three-round-loop",
+      "prompt": "run me through 3 interviews for this posting. I want to see what each round would look like.\n\nData Engineer II\nNorthwind Health (US healthcare analytics, 800 employees)\n\nAbout the team: The Data Platform team builds the pipelines that power clinical and claims analytics for 40+ hospital systems. We ingest HL7/FHIR feeds, claims files and EHR extracts into a Snowflake warehouse.\n\nYou will:\n- Build and operate batch and streaming pipelines with Airflow, dbt and Spark on Databricks\n- Model clinical and claims data for analytics consumers\n- Implement data quality checks and lineage\n- Handle PHI in compliance with HIPAA\n- Partner with analysts and clinical informaticists to understand requirements\n\nYou have:\n- 3-5 years in data engineering\n- Strong SQL and Python\n- Experience with dbt, Airflow, Spark or similar\n- Understanding of dimensional modeling\n- Bonus: healthcare data (HL7, FHIR, claims), Snowflake, Great Expectations",
+      "expected_output": "A role profile and three round files (likely technical, data modeling/system design, behavioural) that build on each other, calibrated to mid-level, specific to healthcare data, HIPAA, dbt/Airflow/Spark. No repeated questions across rounds. Since there is no live user, the mock is not simulated.",
+      "files": [],
+      "assertions": [
+        "A role profile is written that states mid-level (Data Engineer II) and healthcare/HIPAA/HL7/FHIR/Snowflake/dbt/Airflow context",
+        "Exactly three round files exist, each a different round type",
+        "Question-based rounds (technical, behavioural, screen) have why-they-ask, strong-answer bullets and follow-ups on every question; a system design round instead has a prompt plus clarifying questions, core components, hard parts, and failure and trade-off probes",
+        "No question text is repeated across the three rounds",
+        "Later rounds reference or build on earlier ones (e.g. design round references the technical round's topics, behavioural maps to signals from the profile)",
+        "The behavioural round explicitly maps each question to a signal extracted from the posting",
+        "The output does not simulate a fake candidate answering; it presents the rounds as material and notes a live mock needs a session",
+        "At least 5 questions across the rounds mention healthcare-specific concerns (PHI, HIPAA, claims, HL7/FHIR, clinical data)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "topic-drill",
+      "prompt": "quiz me on caching. I'm going for senior backend roles and I always get caught out on the tricky stuff. don't go easy",
+      "expected_output": "A topic profile and one technical round on caching at senior level with a chosen domain, 8-10 questions including marked curveballs, covering several caching sub-areas, with the chat message naming topics only.",
+      "files": [],
+      "assertions": [
+        "A short profile is written stating topic (caching), level (senior) and a chosen domain used consistently across the questions",
+        "A round file with 8 to 10 numbered questions exists, each with why-they-ask, strong-answer bullets and follow-ups",
+        "At least 3 questions are marked as curveballs and belong to a recognisable trap type (obvious answer wrong, predict the output, find the flaw, ask before answering)",
+        "The questions cover at least 4 distinct caching sub-areas (e.g. invalidation, consistency, stampedes/thundering herd, TTL choice, what not to cache, cache-aside vs write-through, eviction, negative caching)",
+        "Questions are anchored in a concrete domain scenario rather than textbook phrasing (no bare 'explain cache-aside')",
+        "Questions are calibrated to senior: they probe trade-offs and failure modes, not definitions",
+        "The final chat message lists topics but does not summarise or reveal answers",
+        "Since the user said 'quiz me' and no live answers are possible, the output does not simulate a fake candidate; it presents the questions and offers to run them live"
+      ]
+    }
+  ]
+}
