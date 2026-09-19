@@ -1,6 +1,8 @@
 # interview-prep
 
-An agent skill that turns a job description into realistic interview practice.
+An agent skill that turns a job description into realistic interview practice for software engineers.
+
+Built for backend, frontend, full-stack, data and infrastructure roles. The role profile and behavioural round work for any posting, but the technical rounds, curveballs and take-home are written for engineering interviews. Support for delivery, product and engineering management roles is planned.
 
 Paste a job posting and get:
 
